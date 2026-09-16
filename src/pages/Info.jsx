@@ -3,6 +3,7 @@ import PrevButton from "../components/PrevButton";
 import InfoInput from "../components/InfoInput";
 import AddButton from "../components/AddButton";
 import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 const Info = () => {
   // logic
@@ -14,8 +15,11 @@ const Info = () => {
     console.log("재료 추가하기");
   };
 
+  const history = useNavigate();
+
   const handleNext = () => {
     console.log("chat페이지로 이동");
+    history("/Chat");
   };
 
   // view
