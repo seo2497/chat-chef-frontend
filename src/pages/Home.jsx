@@ -7,8 +7,7 @@ const Home = () => {
   const history = useNavigate();
 
   const handleStart = () => {
-    // 페이지 이동
-    // react - rounter - dom을 edfde이용한 페이지 이동
+    // react-router-dom을 이용한 페이지 이동
     history("/info");
   };
 
