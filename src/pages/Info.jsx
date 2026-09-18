@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PrevButton from "../components/PrevButton";
 import InfoInput from "../components/InfoInput";
 import AddButton from "../components/AddButton";
@@ -33,7 +33,7 @@ const Info = ({ sendIngredientList }) => {
     const filterDataList = ingredientList.filter(
       (item) => item.value.trim() !== "",
     );
-    console.log("🚀filterDataList:", filterDataList);
+    // console.log("🚀filterDataList:", filterDataList);
     if (filterDataList.length) {
       // 재료 입력값이 있는 경우
       sendIngredientList(ingredientList);
@@ -69,9 +69,9 @@ const Info = ({ sendIngredientList }) => {
   };
 
   // state변경 일어나면 실행
-  useEffect(() => {
-    console.log("ingredientList", ingredientList);
-  }, [ingredientList]);
+  // useEffect(() => {
+  //   console.log("ingredientList", ingredientList);
+  // }, [ingredientList]);
 
   // view
   return (
